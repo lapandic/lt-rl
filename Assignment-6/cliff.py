@@ -92,11 +92,11 @@ for i_run in range(1,runs):
         rewards_table_SARSA[i_episode] += sum_of_rewards
 env.close()
 
-rewards_table_Q /= runs
 rewards_table_SARSA /= runs
+rewards_table_Q /= runs
 
-plt.plot(rewards_table_Q, label='Q-Learning')
 plt.plot(rewards_table_SARSA, label='SARSA')
+plt.plot(rewards_table_Q, label='Q-Learning')
 plt.xlabel('Episodes')
 plt.ylabel('Sum of rewards during the episode')
 plt.ylim([-100, 0])
